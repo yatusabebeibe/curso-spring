@@ -16,7 +16,7 @@ public class TestController {
 
     @GetMapping({"","/", "/hola", "/brrrrr"})
     public String test(Map<String, Object> map) {
-        map.put("coso", "djgak");
+        map.put("coso", "djgak");   
         map.put("bua", "nose");
         return "x";
     }

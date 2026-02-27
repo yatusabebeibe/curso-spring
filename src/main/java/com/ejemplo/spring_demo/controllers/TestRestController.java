@@ -13,7 +13,7 @@ import com.ejemplo.spring_demo.models.Usuario;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apirest")
 public class TestRestController {
     // UsuarioDAO usuarioDAO = new UsuarioDAO();
 
