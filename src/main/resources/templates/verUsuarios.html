@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Usuarios</h1>
+
+    <h2>Añadir</h2>
+    <form action="" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required><br>
+        <input type="text" name="apellido" placeholder="Apellido" required><br>
+        <input type="text" name="direccion" placeholder="Dirección" required><br>
+        <input type="number" name="telefono" placeholder="Teléfono" required><br>
+        <button type="submit">Añadir</button>
+    </form>
+
+    <br>
+    <a href="./añadir"
+        style="display: block; width: max-content;"
+    >Pagina añadir</a>
+    <br>
+
+    <h2>Listado</h2>
+    <table border="1" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario : ${listaUsuarios}">
+                <td th:text="${usuario.nombre}"></td>
+                <td th:text="${usuario.apellido}"></td>
+                <td th:text="${usuario.direccion}"></td>
+                <td th:text="${usuario.telefono}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
